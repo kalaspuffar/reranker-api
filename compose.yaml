@@ -1,0 +1,20 @@
+name: rerankers
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rerankers-api:latest
+    ports:
+      - "32300:32300"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: ["gpu"]
+    # If your Compose ignores 'deploy' (non-Swarm), uncomment the next line instead:
+    # runtime: nvidia
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface:rw
