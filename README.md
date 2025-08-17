@@ -1,4 +1,4 @@
-# Reranker-API
+# Simple ReRanker
 
 This repository wraps [rerankers](https://github.com/AnswerDotAI/rerankers) with an API and docker environment so you can spin it up and have a port you can query for reranking.
 
