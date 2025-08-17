@@ -18,3 +18,8 @@ curl -s http://localhost:32300 -H 'Content-Type: application/json' -d '{
     "data": { "query":"I love you", "docs":["I hate you","I really like you"] }
 }'
 ```
+
+Expected response:
+```
+[["I really like you", -1.5379297733306885], ["I hate you", -4.309110164642334]]
+```
